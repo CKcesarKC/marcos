@@ -1,0 +1,9 @@
+.personalizar {
+    font-size: 2rem; /* Tamaño más grande */
+    color: white; /* Color amarillo sólido */
+    padding: 10px; /* Espacio interno */
+    border: 3px solid rgb(8, 8, 81); /* Contorno amarillo */
+    border-radius: 50%; /* Para que se vea redondito */
+    display: inline-block; /* Para que el borde lo envuelva bien */
+    background-color: rgb(8, 8, 81);
+  }

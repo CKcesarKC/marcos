@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/perros.css" type="text/css">
+    <link rel="stylesheet" href="/css/personalizar.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../IMG/MundoPet's.png" type="image/x-icon">
+    <title>Mundo ZooPet's</title>
+</head>
+<body>
+    <header th:replace="~{fragments/layout :: header}" ></header>
+    <main class="container my-5">
+
+        <div class="text-center mb-5">
+            <p class="text-muted small">NUESTROS AMIGOS</p>
+            <h2 class="fw-bold">Encuentra a tu compañero ideal para toda la vida</h2>
+          </div>
+          
+        <!-- INICIO DE CARD Y MODAL -->
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm card-pequeño">
+                    <img src="https://img1.wsimg.com/isteam/ip/82e6e2b5-f09d-4b34-a7da-faca59d6795d/Glinda%20y%20elphaba.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1500,cg:true"
+                        class="card-img-top" alt="Producto 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Toronto</h5>
+                        <p class="card-text fw-bold text-success">S/ 49.90</p>
+                        <button type="button" class="btn btnColor" data-bs-toggle="modal"data-bs-target="#Animal1">Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="Animal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Adoptame</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Spy un perro alegre y juegueton</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Adoptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN DE CARD Y MODAL -->
+            <!-- INICIO DE CARD Y MODAL -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm card-pequeño">
+                    <img src="https://img1.wsimg.com/isteam/ip/82e6e2b5-f09d-4b34-a7da-faca59d6795d/Baya%20Claud%20gd.jpg/:/cr=t:0%25,l:0%25,w:99.96%25,h:99.96%25/rs=w:2046,cg:true,m"
+                        class="card-img-top" alt="Producto 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Piraña</h5>
+                        <p class="card-text fw-bold text-success">S/ 79.90</p>
+                        <button type="button" class="btn btnColor" data-bs-toggle="modal"data-bs-target="#Animal2">Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="Animal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Adoptame</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Spy un perro alegre y juegueton</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Adoptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN DE CARD Y MODAL -->
+            <!-- INICIO DE CARD Y MODAL -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm card-pequeño">
+                    <img src="https://img1.wsimg.com/isteam/ip/82e6e2b5-f09d-4b34-a7da-faca59d6795d/Yuki%20godaddy.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1500,cg:true"
+                        class="card-img-top" alt="Producto 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Toro</h5>
+                        <p class="card-text fw-bold text-success">S/ 99.90</p>
+                        <button type="button" class="btn btnColor" data-bs-toggle="modal" data-bs-target="#Animal3">Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="Animal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Adoptame</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Spy un perro alegre y juegueton</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Adoptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN DE CARD Y MODAL -->
+            <!-- INICIO DE CARD Y MODAL -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm card-pequeño">
+                    <img src="https://img1.wsimg.com/isteam/ip/82e6e2b5-f09d-4b34-a7da-faca59d6795d/Lecrerc%20godaddy.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1500,cg:true"
+                        class="card-img-top" alt="Producto 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pedrito</h5>
+                        <p class="card-text fw-bold text-success">S/ 99.90</p>
+                        <button type="button" class="btn btnColor" data-bs-toggle="modal" data-bs-target="#Animal4">Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="Animal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Adoptame</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Spy un perro alegre y juegueton</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Adoptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN DE CARD Y MODAL -->
+            <!-- INICIO DE CARD Y MODAL -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm card-pequeño">
+                    <img src="https://img1.wsimg.com/isteam/ip/82e6e2b5-f09d-4b34-a7da-faca59d6795d/Kimi%20godaddy.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1500,cg:true"
+                        class="card-img-top" alt="Producto 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Chicho</h5>
+                        <p class="card-text fw-bold text-success">S/ 99.90</p>
+                        <button type="button" class="btn btnColor" data-bs-toggle="modal" data-bs-target="#Animal5">Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="Animal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Adoptame</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Spy un perro alegre y juegueton</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Adoptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN DE CARD Y MODAL -->
+            <!-- INICIO DE CARD Y MODAL -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm card-pequeño">
+                    <img src="https://img1.wsimg.com/isteam/ip/82e6e2b5-f09d-4b34-a7da-faca59d6795d/Lewis%20godaddy.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1500,cg:true"
+                        class="card-img-top" alt="Producto 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Emy</h5>
+                        <p class="card-text fw-bold text-success">S/ 99.90</p>
+                        <button type="button" class="btn btnColor" data-bs-toggle="modal" data-bs-target="#Animal6">Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="Animal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Adoptame</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Spy un perro alegre y juegueton</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Adoptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN DE CARD Y MODAL -->
+
+        </div>
+    </main>
+    <footer class="container-fluid ColorPie  pt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-4 text-center">
+                    <h4 class="mb-4 ColorTexto">Sobre Nosotros</h4>
+                    <ul class="list-unstyled tamaño-p">
+                        <li >Doctores Especializadas</li>
+                        <li >Creación de la Empresa</li>
+                        <li >Fundadores Principales</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-4 text-center">
+                    <h4 class="mb-4 ColorTexto">Servicio al Cliente</h4>
+                    <ul class="list-unstyled tamaño-p">
+                        <li >Términos y condiciones</li>
+                        <li >Politica de Privacidad</li>
+                        <li >Libro de Reclamaciones</li>
+                    </ul>                
+                </div>
+                <div class="col-12 col-sm-4 text-center">
+                    <h4 class="mb-4 ColorTexto">Contactanos</h4>
+                    <ul class="list-unstyled tamaño-p">
+                        <li>LLamanos al: 987654321</li>
+                        
+                        <li >Escribenos a: Zoopet@gmail.com</li>
+                        
+                        <li class="me-2" style="color: #F9E27D; font-size: 20px;">Siguenos:
+                            <i class="fa-brands fa-facebook me-2"></i>
+                            <i class="fa-brands fa-whatsapp me-2"></i>
+                            <i class="fa-brands fa-instagram me-2"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr style="height: 7px; background-color: #fc7171; border: none;">
+        <div class="text-light text-center pt-3 pb-1 mt-1 ColorPie">
+            <p>Todos los derechos reservados Av. Paseo de la República 3220, San Isidro, Perú - 2025 - &copy; MundoPet´s S.A.C.</p>
+        </div>
+    </footer>
+</body>
+</html>

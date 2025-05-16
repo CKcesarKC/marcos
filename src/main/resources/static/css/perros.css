@@ -1,0 +1,11 @@
+.card-pequeño {
+    max-width: 250px; /* Achica el ancho */
+    max-height: 380px;
+    margin: 0 auto; /* Centra el card */
+    
+  }
+  
+  .card-pequeño img {
+    height: 200px; /* Más pequeña la imagen */
+    object-fit: cover; /* Recorta bonito la imagen */
+  }

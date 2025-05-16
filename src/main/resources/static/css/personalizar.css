@@ -1,0 +1,33 @@
+.ColorPie{
+    background-color: #005463; 
+    /* background-color:  rgb(8, 8, 81); */
+}
+.ColorHead{
+    background-color: #F9E27D; 
+    /*background-color: #20A8C4;*/
+}
+.ColorTexto{
+    color: #F9E27D;
+}
+ul.navbar-nav li.nav-item a.nav-link {
+    color: #005463;
+}
+
+.tamaño-p{
+    
+    font-size: 15px;
+    font-family: cursive;
+}
+.tamaño-p li{
+    color: white;
+    margin-bottom: 16px;
+}
+.btnColor{
+    background-color: #F28CA3;
+    color: white;
+}
+.btnColor2{
+    background-color: #005463;
+    color: white;
+}
+

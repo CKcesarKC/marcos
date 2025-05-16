@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg ColorHead">
+            <div class="container-fluid">
+                <a class="navbar-brand " href="/">
+                    <img src="../img/mundoPet's.png" alt="OH"> Mundo ZooPet's
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <form class="mx-auto d-flex w-50" role="search">
+                        <input class="form-control me-2 fs-5 bg-warning-subtle" type="search" placeholder="Buscar Productos"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">
+                            <i class="bi bi-search "></i>
+                        </button>
+                    </form>
+                    <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll " style="--bs-scroll-height: 100px;">
+                        <li class="nav-item dropdown mx-2">
+                            <a class="nav-link dropdown-toggle nav-link active fs-5 "
+                                role="button" data-bs-toggle="dropdown">Categorias</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-info-emphasis" href="/gatos">Gatos</a></li>
+                                <li><a class="dropdown-item text-info-emphasis" href="/perros">Perros</a></li>
+                                <li>
+                                    <hr class="dropdown-divider ">
+                                </li>
+                                <li><a class="dropdown-item text-info-emphasis" href="/otros">Productos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active fs-5" aria-current="page" href="/contactos">Contactos</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active fs-5" aria-current="page" href="/nosotros">Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown mx-2 ">
+                            <a class="nav-link dropdown-toggle nav-link active fs-5"
+                                role="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-person fs-4"></i>
+                                <span class="d-md-none" >Mi Cuenta</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" style="min-width: 10rem;">
+                                <li>
+                                    <a class="dropdown-item text-info-emphasis" href="/registrate">Registrate</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-info-emphasis" href="/iniciar-sesion">Iniciar Sesión</a>
+                                </li>
+                            </ul>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/carrito">
+                                <i class="bi bi-cart fs-4"></i>
+                                <span class="d-md-none" >Mis Compras</span>
+                            </a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>

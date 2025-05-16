@@ -215,45 +215,6 @@
 
         </div>
     </main>
-    <footer class="container-fluid ColorPie  pt-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-4 text-center">
-                    <h4 class="mb-4 ColorTexto">Sobre Nosotros</h4>
-                    <ul class="list-unstyled tamaño-p">
-                        <li >Doctores Especializadas</li>
-                        <li >Creación de la Empresa</li>
-                        <li >Fundadores Principales</li>
-                    </ul>
-                </div>
-                <div class="col-12 col-sm-4 text-center">
-                    <h4 class="mb-4 ColorTexto">Servicio al Cliente</h4>
-                    <ul class="list-unstyled tamaño-p">
-                        <li >Términos y condiciones</li>
-                        <li >Politica de Privacidad</li>
-                        <li >Libro de Reclamaciones</li>
-                    </ul>                
-                </div>
-                <div class="col-12 col-sm-4 text-center">
-                    <h4 class="mb-4 ColorTexto">Contactanos</h4>
-                    <ul class="list-unstyled tamaño-p">
-                        <li>LLamanos al: 987654321</li>
-                        
-                        <li >Escribenos a: Zoopet@gmail.com</li>
-                        
-                        <li class="me-2" style="color: #F9E27D; font-size: 20px;">Siguenos:
-                            <i class="fa-brands fa-facebook me-2"></i>
-                            <i class="fa-brands fa-whatsapp me-2"></i>
-                            <i class="fa-brands fa-instagram me-2"></i>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <hr style="height: 7px; background-color: #fc7171; border: none;">
-        <div class="text-light text-center pt-3 pb-1 mt-1 ColorPie">
-            <p>Todos los derechos reservados Av. Paseo de la República 3220, San Isidro, Perú - 2025 - &copy; MundoPet´s S.A.C.</p>
-        </div>
-    </footer>
+    <footer th:replace="~{fragments/layout :: footer}" ></footer>
 </body>
 </html>

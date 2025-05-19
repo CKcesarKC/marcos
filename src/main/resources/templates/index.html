@@ -1,99 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head th:replace="~{fragments/layout :: head}" ></head>
+
+<head th:replace="~{fragments/layout :: head}"></head>
+
 <body>
-    <header th:replace="~{fragments/layout :: header}" ></header>
+    <header th:replace="~{fragments/layout :: header}"></header>
     <main class="container-lg mb-5 mt-5">
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="5000">
-                <img src="/img/unos.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item" data-bs-interval="5000">
-                <img src="/img/doss.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item" data-bs-interval="5000">
-                <img src="/img/tress.png" class="d-block w-100" alt="...">
-              </div>
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="/img/unos.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="/img/doss.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="/img/tress.png" class="d-block w-100" alt="...">
+                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <!--- OTRO LADO-->
         <div class="container-fluid text-center my-5">
             <h1 class="mb-4">Un amigo te espera</h1>
             <div class="text-start">
-              <div class="row g-4">
                 <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card h-100 shadow-sm card-pequeño">
-                            <img src="https://img1.wsimg.com/isteam/ip/82e6e2b5-f09d-4b34-a7da-faca59d6795d/Glinda%20y%20elphaba.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1500,cg:true"
-                                class="card-img-top" alt="Producto 1">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Toronto</h5>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm card-pequeño">
+                                <img src="https://img1.wsimg.com/isteam/ip/82e6e2b5-f09d-4b34-a7da-faca59d6795d/Glinda%20y%20elphaba.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1500,cg:true"
+                                    class="card-img-top" alt="Producto 1">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Toronto</h5>
+                                </div>
                             </div>
                         </div>
-                  </div>
-                      <div class="col-md-4">
-                          <div class="card h-100 shadow-sm card-pequeño">
-                              <img src="https://static.wixstatic.com/media/09e838_1e188b7996d1477b9d5896e84c70e3c1~mv2.jpg/v1/fill/w_285,h_285,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/09e838_1e188b7996d1477b9d5896e84c70e3c1~mv2.jpg"
-                                  class="card-img-top" alt="Producto 1">
-                              <div class="card-body text-center">
-                                  <h5 class="card-title">Piraña</h5>
-                              </div>
-                          </div>
-                      </div>
-                  <div class="col-md-4">
-                    <div class="card h-100 shadow-sm card-pequeño">
-                        <img src="https://img1.wsimg.com/isteam/ip/82e6e2b5-f09d-4b34-a7da-faca59d6795d/Yuki%20godaddy.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1500,cg:true"
-                            class="card-img-top" alt="Producto 3">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Toro</h5>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm card-pequeño">
+                                <img src="https://static.wixstatic.com/media/09e838_1e188b7996d1477b9d5896e84c70e3c1~mv2.jpg/v1/fill/w_285,h_285,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/09e838_1e188b7996d1477b9d5896e84c70e3c1~mv2.jpg"
+                                    class="card-img-top" alt="Producto 1">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Piraña</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm card-pequeño">
+                                <img src="https://img1.wsimg.com/isteam/ip/82e6e2b5-f09d-4b34-a7da-faca59d6795d/Yuki%20godaddy.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1500,cg:true"
+                                    class="card-img-top" alt="Producto 3">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Toro</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-primary d-flex text-end" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#contenidoExtra" aria-expanded="false" aria-controls="contenidoExtra">
+                                Nuestros Productos
+                            </button>
+                        </div>
+                        <div class="collapse mt-5" id="contenidoExtra">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <img src="https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw50c7ea8f/images/MD007859-1.jpg"
+                                            class="card-img-top" alt="Producto 3">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Leeby Cama Cueva Antiestrés Gris para gatos</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <img src="https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw394e2959/images/AP000052.jpg"
+                                            class="card-img-top" alt="Producto 2">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Dog Chow Adulto Raza Mediana Y Grande Alimento
+                                                Seco
+                                                Perro</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card h-100 shadow-sm">
+                                        <img src="https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dwbf61c562/images/PS000656-1.webp"
+                                            class="card-img-top" alt="Producto 3">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">Transportador De Viaje Para Mascota L 80</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-          <div class="d-flex justify-content-center">
-            <button class="btn btn-primary d-flex text-end" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoExtra" aria-expanded="false" aria-controls="contenidoExtra">
-              Nuestros Productos
-            </button>
-          </div>
-            <div class="collapse mt-5" id="contenidoExtra">
-              <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw50c7ea8f/images/MD007859-1.jpg" class="card-img-top" alt="Producto 3">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Leeby Cama Cueva Antiestrés Gris para gatos</h5>
-                        </div>
+            </div>
+        </div>
+        
+        <div class="accordion mt-5 mb-5 mx-auto" style="max-width: 1000px;" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <i class="bi bi-person-check-fill fs-4"></i>
+                        <span class="ms-3 fs-5">CLIENTES SATISFECHOS</span>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul class="list-group p-3 mt-4 mb-4 d-flex flex-row justify-content-between" th:each="msjs : ${msj}">
+                            <li>[[${msjs}]]</li>
+                        </ul>
                     </div>
                 </div>
-      
-                  <div class="col-md-4">
-                      <div class="card h-100 shadow-sm">
-                          <img src="https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw394e2959/images/AP000052.jpg" class="card-img-top" alt="Producto 2">
-                          <div class="card-body text-center">
-                              <h5 class="card-title">Dog Chow Adulto Raza Mediana Y Grande Alimento Seco Perro</h5>
-                          </div>
-                      </div>
-                  </div>
-                  
-                  <div class="col-md-4">
-                      <div class="card h-100 shadow-sm">
-                          <img src="https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dwbf61c562/images/PS000656-1.webp" class="card-img-top" alt="Producto 3">
-                          <div class="card-body text-center">
-                              <h5 class="card-title">Transportador De Viaje Para Mascota L 80</h5>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+            </div>
+        </div>
+        <div class="accordion mt-5 mb-5 mx-auto" style="max-width: 1000px;" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="bi bi-person-check-fill fs-4"></i>
+                        <span class="ms-3 fs-5">CLIENTES SATISFECHOS</span>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul class="list-group mt-4 mb-4 d-flex flex-row justify-content-between list-unstyled" th:each="msjs : ${msj}">
+                            <p>[[${msjs}]]</p>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    <footer th:replace="~{fragments/layout :: footer}" ></footer>
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
 </body>
+
 </html>

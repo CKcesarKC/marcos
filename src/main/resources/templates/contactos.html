@@ -3,9 +3,9 @@
 <head th:replace="~{fragments/layout :: head}" ></head>
 <body>
     <header th:replace="~{fragments/layout :: header}" ></header>
-    <main class="d-flex">
+    <main>
+      <div class="d-flex">
         <div class="container-md p-5 ">
-            
             <div class="text-center">
                 <p class="text-muted small">INFORMACIÓN SOBRE NOSOTROS</p>
                 <h2 class="fw-bold mb-4">Contáctanos para cualquier pregunta</h2>
@@ -34,8 +34,211 @@
                     <button type="submit" class="btn btn-primary mt-3 ">Enviar</button>
                   </div>
             </form>
-          
-        </div>
+      </div>
+      </div>
+          <div class="accordion mt-5 mb-5 mx-auto" style="max-width: 1000px;" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="bi bi-person-check-fill fs-4"></i>
+                        <span class="ms-3 fs-5">CLIENTES SATISFECHOS</span>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul class="list-group mt-4 mb-4 d-flex flex-row justify-content-between list-unstyled">
+                            <li class="text-decoration-none">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">Ana y su mascota conejo</button>
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Ana y su mascota
+                                                    conejo</h1>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Ana siempre había soñado con tener un conejo. Un día, vio un anuncio
+                                                    de adopción y decidió ir a un refugio. Allí, encontró a un pequeño
+                                                    conejo blanco con manchas negras. Al sostenerlo, sintió una conexión
+                                                    instantánea. Lo llamó Copito y lo adoptó con mucha ilusión. Desde
+                                                    ese momento, Ana y Copito compartieron muchos momentos de felicidad.
+                                                </p>
+                                                <img src="/img/conejo.png" alt="conejo">
+                                            </div>
+                                            <div class="d-flex justify-content-md-end mb-3">
+                                                <button class="btn btn-primary me-md-2" type="button">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal2">Carlos y su perro Peruano</button>
+                                <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel2">Carlos y su perro
+                                                    Peruano</h1>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Carlos siempre quiso tener un perro. Un día, encontró a un perro sin
+                                                    pelo en el refugio, tímido pero amigable. Se acercó a él y, al
+                                                    mirarlo, supo que era el indicado. Lo adoptó y lo llamó Tizón, por
+                                                    su color oscuro. Desde entonces, Tizón y Carlos se volvieron
+                                                    inseparables, compartiendo cada día con alegría. Aunque su perro no
+                                                    tenía pelo, su amor era inmenso.</p>
+                                                <img src="/img/pealo.png" alt="pelao">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-primary" data-bs-dismiss="modal"
+                                                    aria-label="Close">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal3">Maria y su gato soñado</button>
+                                <div class="modal fade" id="exampleModal3" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel3">Maria y su gato
+                                                    soñado</h1>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>María siempre soñó con tener un gato. Un día, llegó al refugio y vio
+                                                    a un gato de ojos grandes y pelaje suave, pero un tanto reservado.
+                                                    Se acercó a él y, al mirarlo, sintió que era el compañero perfecto.
+                                                    Lo adoptó y lo llamó Nube, por su pelaje blanco como la espuma.
+                                                    Desde ese día, Nube y María se volvieron inseparables, compartiendo
+                                                    momentos de tranquilidad y ternura. Aunque su gato era algo tímido,
+                                                    su cariño era infinito.</p>
+                                                <img src="/img/chusca.png" alt="chusca">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-primary" data-bs-dismiss="modal"
+                                                    aria-label="Close">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo text-center">
+                        <i class="bi bi-box2-heart-fill fs-4"></i>
+                        <span class="ms-3 fs-5">MASCOTAS ADOPTADAS</span>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul class="list-group mt-4 mb-4 d-flex flex-row justify-content-between list-unstyled">
+                            <li class="text-decoration-none">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal4">Luffy</button>
+                                <div class="modal fade" id="exampleModal4" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel4">Luffy </h1>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Luffy siempre fue un perro lleno de energía y ternura. Un día,
+                                                    encontró su hogar con Marco, quien decidió adoptarlo después de
+                                                    verlo en el refugio. Aunque Luffy al principio era algo inquieto,
+                                                    pronto mostró su lealtad y cariño de manera incondicional. Juntos
+                                                    vivieron muchas aventuras, y Luffy se convirtió en el compañero
+                                                    perfecto, siempre dispuesto a hacer reír a Marco con su travesuras.
+                                                    Luffy demostró que, con amor y paciencia, una adopción puede
+                                                    transformar la vida de ambos.</p>
+                                                <img src="/img/lobo.png" alt="lobo">
+                                            </div>
+                                            <div class="d-flex justify-content-md-end mb-3">
+                                                <button class="btn btn-primary me-md-2" type="button">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal5">Shiro</button>
+                                <div class="modal fade" id="exampleModal5" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel5" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel5">Shiro</h1>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Shiro siempre fue un perro tranquilo, pero con un corazón lleno de
+                                                    amor. Un día, encontró su hogar en la casa de Javier, quien lo
+                                                    adoptó con la esperanza de darle una vida mejor. Desde ese momento,
+                                                    Shiro y Javier se volvieron inseparables, compartiendo paseos,
+                                                    momentos de calma y risas. Aunque al principio Shiro era un poco
+                                                    tímido, pronto se sintió cómodo y su cariño por Javier creció cada
+                                                    día más. Juntos demostraron que, a veces, la adopción crea una
+                                                    conexión más fuerte que cualquier otra cosa.</p>
+                                                <img src="/img/sshrio.png" alt="Shiro">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-primary" data-bs-dismiss="modal"
+                                                    aria-label="Close">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal6">Kenay</button>
+                                <div class="modal fade" id="exampleModal6" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel6" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel6">Kenay</h1>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Kenay siempre fue un perro divertido, lleno de energía y siempre
+                                                    dispuesto a hacer reír a todos a su alrededor. Un día, fue adoptado
+                                                    por Carla, quien inmediatamente se enamoró de su alegría y su
+                                                    personalidad traviesa. Juntos, compartieron incontables momentos de
+                                                    juego y cariño. Aunque Kenay al principio no estaba acostumbrado a
+                                                    su nuevo hogar, pronto encontró su lugar y se convirtió en el mejor
+                                                    amigo de Carla, demostrando que la adopción trae consigo una
+                                                    felicidad inesperada.</p>
+                                                <img src="/img/pompas.png" alt="chusca">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-primary" data-bs-dismiss="modal"
+                                                    aria-label="Close">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+          </div>
     </main>
     <footer th:replace="~{fragments/layout :: footer}" ></footer>
 </body>

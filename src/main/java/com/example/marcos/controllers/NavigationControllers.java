@@ -1,5 +1,9 @@
 package com.example.marcos.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.ui.Model;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,8 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class NavigationControllers {
 
     @GetMapping
-    public String index(){
+    public String index(Model model){
+        List<String> data = new ArrayList<>();
+        data.add("Rosa: El servicio fue excelente, brindaron atención rápida y eficiente. Superaron mis expectativas y me hicieron sentir muy bienvenida.");
+        data.add("María Fernanda: El servicio fue excepcional. Atendieron todas mis dudas con paciencia y me ofrecieron soluciones a medida.");
+        data.add("Javier: El servicio fue increíble. El equipo fue muy atento y resolvió todas mis necesidades de manera rápida y eficiente.");
+        model.addAttribute("msj", data);
         return "index";
+        
     }
 
     @GetMapping ("/carrito")

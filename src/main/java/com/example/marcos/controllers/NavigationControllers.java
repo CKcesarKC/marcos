@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping
@@ -28,26 +27,11 @@ public class NavigationControllers {
     @GetMapping ("/carrito")
     public String carrito(){
         return "carrito";
-
-    }    @GetMapping("/contactos")
-    public String contactos(@RequestParam(value = "mensajeEnviado", required = false) String mensajeEnviado, Model model) {
-        // Si el parámetro "mensajeEnviado" está presente, lo pasamos al modelo para mostrar el alert
-        if (mensajeEnviado != null && mensajeEnviado.equals("true")) {
-            model.addAttribute("mensajeEnviado", true);
-        }
-        return "contactos";  // Página contactos
     }
-
-    // Este método maneja el envío del formulario
-    @GetMapping("/enviarFormulario")
-    public String enviarFormulario(@RequestParam String nombres, @RequestParam String email, @RequestParam String mensaje) {
-        // Aquí puedes hacer cualquier procesamiento con los datos del formulario (por ejemplo, guardarlos en la base de datos, enviar un correo, etc.)
-        
-        // Redirigir a la página de contactos con el parámetro "mensajeEnviado=true"
-        return "redirect:/contactos?mensajeEnviado=true";
+    @GetMapping("/contactos")
+    public String contactos(){
+        return "contactos";
     }
-
-    // Otros métodos para otras páginas, como carrito, gatos, etc.
     @GetMapping("/gatos")
     public String gatos(){
         return "gatos";

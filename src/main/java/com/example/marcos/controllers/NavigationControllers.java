@@ -20,41 +20,40 @@ public class NavigationControllers {
         data.add("María Fernanda: El servicio fue excepcional. Atendieron todas mis dudas con paciencia y me ofrecieron soluciones a medida.");
         data.add("Javier: El servicio fue increíble. El equipo fue muy atento y resolvió todas mis necesidades de manera rápida y eficiente.");
         model.addAttribute("msj", data);
-        return "index";
-        
+        return "pages/index";
     }
 
     @GetMapping ("/carrito")
     public String carrito(){
-        return "carrito";
+        return "pages/carrito";
     }
     @GetMapping("/contactos")
     public String contactos(){
-        return "contactos";
+        return "pages/contactos";
     }
     @GetMapping("/gatos")
     public String gatos(){
-        return "gatos";
+        return "pages/gatos";
     }
     @GetMapping("/iniciar-sesion")
     public String iniciarSesion(){
-        return "iniciar-sesion";
+        return "pages/iniciar-sesion";
     }
     @GetMapping("/nosotros")
     public String nosotros(){
-        return "nosotros";
+        return "pages/nosotros";
     }
     @GetMapping("/otros")
     public String otros(){
-        return "otros";
+        return "pages/otros";
     }
     @GetMapping("/perros")
     public String perros(){
-        return "perros";
+        return "pages/perros";
     }
     @GetMapping("/registrate")
     public String registrate(){
-        return "registrate";
+        return "pages/registrate";
     }
 
 }

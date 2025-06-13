@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario de las mascotas</h1>
+    <a href="/mascotas">Regresar</a>
+    <form style="display: flex; flex-direction: column; align-items: center; gap: 10px;" th:action="@{/mascotas/procesar}" method="post" th:object="${mascotas}">
+        <input type="hidden" th:field="*{id}">
+
+        <input type="text" placeholder="Nombre" th:field="*{nombre}">
+        <p th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="errors"></p> 
+
+        <input type="number" placeholder="Edad" th:field="*{edad}">
+        <p th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}" class="errors"></p> 
+
+        <input type="text" placeholder="Cantidad de vacunas" th:field="*{vacunas}">
+        <p th:if="${#fields.hasErrors('vacunas')}" th:errors="*{vacunas}" class="errors"></p> 
+
+        <label for="fechaAdopcion">Fecha de Adopción</label>
+        <input type="date" placeholder="Fecha de Adopción" th:field="*{fechaAdopcion}">
+        <p th:if="${#fields.hasErrors('fechaAdopcion')}" th:errors="*{fechaAdopcion}" class="errors"></p> 
+
+        <button type="submit">Procesar</button>
+    </form>
+</body>
+</html>

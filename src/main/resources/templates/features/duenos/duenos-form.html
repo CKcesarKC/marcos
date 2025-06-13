@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario de los Dueños</h1>
+    <a href="/duenos">Regresar</a>
+    <form style="display: flex; flex-direction: column; align-items: center; gap: 10px;" th:action="@{/duenos/procesar}" method="post" th:object="${dueno}">
+        <input type="hidden" th:field="*{id}">
+
+        <input type="text" placeholder="Nombre" th:field="*{nombre}">
+        <p th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="errors"></p> 
+
+        <input type="email" placeholder="Email" th:field="*{email}">
+        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="errors"></p> 
+
+        <input type="number" placeholder="Edad" th:field="*{edad}">
+        <p th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}" class="errors"></p> 
+
+        <label for="mascotas">Seleccione el descubridor</label>
+        <select th:field="*{mascota}">
+        <option value="">-- Seleccione --</option>
+            <option th:each="masco : ${mascotas}" th:value="${masco.id}">
+                [[${masco.nombre}]]
+            </option>
+        </select>
+
+        <button type="submit">Procesar</button>
+    </form>
+</body>
+</html>

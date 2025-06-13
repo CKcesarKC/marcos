@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listado de las Dueños</h1>
+    <a href="/inicio">Regresar</a>
+    <table border="1" style="text-align: center; width: 100%;">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Edad</th>
+                <th>mascota</th>
+                <th>
+                    <a href="duenos/nuevo">+</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="du : ${duenos}">
+                <td>[[${du.id}]]</td>
+                <td>[[${du.nombre}]]</td>
+                <td>[[${du.email}]]</td>
+                <td>[[${du.edad}]]</td>
+                <td>[[${du.mascota.nombre}]]</td>
+                <td>
+                    <a th:href="@{/duenos/editar/{id}(id=${du.id})}">lapiz</a>
+                </td>
+                <td>
+                    <a th:href="@{/duenos/eliminar/{id}(id=${du.id})}" onclick="return confirm('¿Eliminar?')">tachito</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

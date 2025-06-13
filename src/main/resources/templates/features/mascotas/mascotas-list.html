@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listado de las mascotas</h1>
+    <a href="inicio">Regresar</a>
+    <table border="1" style="text-align: center; width: 100%;">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Fecha de Adopción</th>
+                <th>Cantidad de vacunas</th>
+                <th>
+                    <a href="mascotas/nuevo">+</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="masco : ${mascotas}">
+                <td>[[${masco.id}]]</td>
+                <td>[[${masco.nombre}]]</td>
+                <td>[[${masco.edad}]]</td>
+                <td>[[${masco.fechaAdopcion}]]</td>
+                <td>[[${masco.vacunas}]]</td>
+                <td>
+                    <a th:href="@{/mascotas/editar/{id}(id=${masco.id})}">lapiz</a>
+                </td>
+                <td>
+                    <a th:href="@{/mascotas/eliminar/{id}(id=${masco.id})}" onclick="return confirm('¿Eliminar?')">tachito</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

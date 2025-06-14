@@ -20,7 +20,7 @@
         <input type="number" placeholder="Edad" th:field="*{edad}">
         <p th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}" class="errors"></p> 
 
-        <label for="mascotas">Seleccione el descubridor</label>
+        <label for="mascotas">Seleccione de la mascotas</label>
         <select th:field="*{mascota}">
         <option value="">-- Seleccione --</option>
             <option th:each="masco : ${mascotas}" th:value="${masco.id}">

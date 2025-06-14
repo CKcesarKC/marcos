@@ -29,22 +29,21 @@ public class DuenoController {
         return "features/duenos/duenos-list";
     }
     @GetMapping("nuevo")
-    public String nuevoDueno(org.springframework.ui.Model model){
-        model.addAttribute("dueno", new Dueno());
+    public String nuevoDinosaurios(org.springframework.ui.Model model){
+        model.addAttribute("duenos", new Dueno());
         model.addAttribute("mascotas", mascotaService.getAll());
-        return "features/duenos/duenos-form";
+        return "features/dinosaurio/dinosaurio-form";
     }
-    
     @GetMapping("editar/{id}")
     public String editarDueno(@PathVariable Integer id,org.springframework.ui.Model model){
-        model.addAttribute("dueno", duenoService.getById(id));
+        model.addAttribute("duenos", duenoService.getById(id));
         model.addAttribute("mascotas", mascotaService.getAll());
-        return "features/duenos/duenos-form";
+        return "features/dinosaurio/dinosaurio-form";
     }
     @GetMapping("eliminar/{id}")
     public String eliminar(@PathVariable("id") Integer idinteger){
         duenoService.delete(idinteger);
-        return "redirect:/duenos";
+        return "redirect:/dinosaurio";
     }
     
     @PostMapping("procesar")

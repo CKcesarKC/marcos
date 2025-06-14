@@ -11,28 +11,27 @@
                 <h2 class="fw-bold mb-4">Contáctanos para cualquier pregunta</h2>
                 <i class="fa-solid fa-envelope mb-4" style="font-size: 25px;"></i>
             </div>
-            <form>
-                <div class="mb-5 mt-5">
+            <form th:action="@{/comentarios/procesar}" method="post">
+                <div class="mb-3 mt-5">
                     <div class="w-75 mx-auto text-start">
-                      <label for="exampleInputEmail1" class="form-label" >Nombres</label>
-                      <input type="text" class="form-control" placeholder="Nombres" id="exampleInputEmail1">
+                      <label class="mb-2">Nombres</label>
+                        <input type="text" class="form-control" placeholder="Nombres" name="nombre">
                     </div>
                   </div>
                   <div class="mb-3">
                     <div class="w-75 mx-auto text-start">
-                      <label for="exampleInputPassword1" class="form-label">Correo Electronico</label>
-                      <input type="email" class="form-control" placeholder="Email" id="exampleInputPassword1">
+                      <label class="mt-3 mb-2">Correo Electronico</label>
+                      <input type="email" class="form-control" placeholder="Email" name="correo">
                     </div>
                   </div>
                   <div class="mb-3">
                     <div class="w-75 mx-auto text-start">
-                      <label for="exampleInputMessage1" class="form-label">Déjanos tu comentario</label>
-                      <textarea class="form-control" id="exampleInputMessage1" placeholder="Comentarios..." rows="5"></textarea>
+                      <label class="mt-3 mb-2">Déjanos tu comentario</label>
+                      <textarea class="form-control" placeholder="Comentarios" rows="5" name="comentario"></textarea>
                     </div>
                   </div>
                   <div class="text-center" th:if="1 eq 1">
-                    <button type="submit" class="btn btn-primary mt-3 " onclick="alert('El mensaje ha sido enviado correctamente')">
-                      Enviar</button>
+                    <button type="submit" class="btn btn-primary mt-3 " onclick="alert('El mensaje ha sido enviado correctamente')">Procesar</button>
                   </div>
             </form>
       </div>
@@ -242,6 +241,7 @@
           </div>
                     <a href="/mascotas">Mascotas</a>
                     <a href="/duenos">Dueños</a>
+                    <a href="/comentarios">Comentarios</a>
     </main>
     <footer th:replace="~{fragments/layout :: footer}" ></footer>
 </body>

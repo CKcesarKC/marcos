@@ -1,0 +1,45 @@
+.tabla-fondo {
+    width: 80%;
+    max-width: 80%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 3px 10px 10px rgba(5, 5, 5, 0.5);
+    padding-top: 20px;
+    margin-left: 220px;
+    margin-bottom: 50px;
+}
+
+.titulo-principal {
+    display: flex;
+    color: rgb(80, 80, 255);
+    gap: 10px;
+    padding-left: 230px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tabla-cuerpo {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.titulo-secundario {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.navegacion {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navegacion:hover {
+    color: rgb(45, 41, 252);
+    transition: 0.3s;
+}
+.tab tr:hover td {
+    background-color: #fff351;
+    transition:0.3s ease;
+}

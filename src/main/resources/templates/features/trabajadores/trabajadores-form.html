@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="~{fragments/layout :: head}"></head>
+<body>
+    <header th:replace="~{fragments/layout :: header}"></header>
+    <div class="formulario-principal">
+        <div>
+            <i class="bi bi-file-earmark-plus-fill" style="font-size: 50px;"></i>
+        </div>
+        <div>
+            <h1 class="form-titulo-principal">Formulario de los Trabajador</h1>
+            <span style="color: rgb(136, 136, 136);">
+                Rellene los campos solicitados
+            </span>
+        </div>
+    </div>
+    <div class="formulario-fondo">
+        <form class="formulario-p" th:action="@{/trabajadores/procesar}" method="post" th:object="${trabajador}">
+            <h1>Registrar Trabajador</h1>
+            <a class="for-navegacion" href="/trabajadores">Regresar</a>
+            <input type="hidden" th:field="*{id}">
+
+            <div class="form-floating mb-3" style="width: 350px;">
+                <input type="text" class="form-control" placeholder="Codigo" th:field="*{codigo}">
+                <label for="floatingText">Codigo</label>
+                <p th:if="${#fields.hasErrors('codigo')}" th:errors="*{codigo}" class="errors"></p>
+            </div>
+
+            <div class="form-floating mb-3" style="width: 350px;">
+                <input type="number" class="form-control" placeholder="Edad" th:field="*{edad}">
+                <label for="floatingText">Edad</label>
+                <p th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}" class="errors"></p>
+            </div>
+            
+
+            <div class="form-floating mb-3" style="width: 350px;">
+                <input type="text" class="form-control" placeholder="Nombre" th:field="*{nombre}">
+                <label for="floatingText">Nombre</label>
+                <p th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="errors"></p>
+            </div>
+
+            <div class="form-floating mb-3" style="width: 350px;">
+                <input type="email" class="form-control" placeholder="Correo" th:field="*{correo}">
+                <label for="floatingText">Correo</label>
+                <p th:if="${#fields.hasErrors('correo')}" th:errors="*{correo}" class="errors"></p>
+            </div>
+            
+            <div class="form-floating mb-3" style="width: 350px;">
+                <input type="text" class="form-control" placeholder="Direccion" th:field="*{direccion}">
+                <label for="floatingText">Direccion</label>
+                <p th:if="${#fields.hasErrors('direccion')}" th:errors="*{direccion}" class="errors"></p>
+            </div>
+            
+            <div class="form-floating mb-3" style="width: 350px;">
+                <input type="date" class="form-control" placeholder="Fecha de Ingreso" th:field="*{FechaIngreso}">
+                <label for="floatingText">Fecha de Ingreso</label>
+                <p th:if="${#fields.hasErrors('FechaIngreso')}" th:errors="*{FechaIngreso}" class="errors"></p>
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary">Procesar</button>
+        </form>
+    </div>
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
+</html>

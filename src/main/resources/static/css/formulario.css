@@ -1,0 +1,39 @@
+.formulario-fondo {
+    max-width: 30%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 3px 10px 10px rgba(5, 5, 5, 0.5);
+    padding-top: 20px;
+    margin-left: 620px;
+    margin-bottom: 50px;
+}
+
+.formulario-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 140px;
+}
+.form-titulo-principal{
+    font-size: 28px;
+}
+.formulario-principal {
+    display: flex;
+    color: rgb(80, 80, 255);
+    gap: 10px;
+    padding-left: 620px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.for-navegacion{
+    text-decoration: none;
+    font-size: 20px;
+}
+.for-navegacion:hover{
+    color: rgb(51, 65, 255);
+}
+.tab tr:hover td {
+    background-color: #fff351;
+    transition: 0.3s ease;
+}

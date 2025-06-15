@@ -17,12 +17,12 @@
         </div>
     </div>
     <div class="tabla-fondo">
-        <h1 class="titulo-secundario">Listado de las Dueños</h1>
+        <h1 class="titulo-secundario">Listado de los Trabajadores</h1>
         <div style="margin-bottom: 20px; display: flex; justify-content: space-between; padding-left: 165px; padding-right: 150px;">
             <a class="navegacion" href="/contactos">
                 Volver
             </a>
-            <a class="navegacion" href="duenos/nuevo">
+            <a class="navegacion" href="trabajadores/nuevo">
                 Agregar un nuevo usuario
                 <i class="bi bi-plus-circle"></i>
             </a>
@@ -32,10 +32,12 @@
                 <thead class="table-primary">
                     <tr>
                         <th style="padding: 10px;">ID</th>
+                        <th>CODIGO-TRABAJADOR</th>
                         <th>NOMBRE</th>
-                        <th>CORREO</th>
                         <th>EDAD</th>
-                        <th>MASCOTA</th>
+                        <th>FECHA DE INGRESO</th>
+                        <th>CORREO</th>
+                        <th>DIRECCIÓN</th>
                         <th>
                             <i class="bi bi-gear-fill" style="font-size: 14px;"></i>
                             ACCIONES
@@ -43,19 +45,21 @@
                     </tr>
                 </thead>
                 <tbody class="table-group-divider tab">
-                    <tr th:each="du : ${duenos}">
-                        <td>[[${du.id}]]</td>
-                        <td>[[${du.nombre}]]</td>
-                        <td>[[${du.email}]]</td>
-                        <td>[[${du.edad}]]</td>
-                        <td>[[${du.mascota.nombre}]]</td>
+                    <tr th:each="trab : ${trabajador}">
+                        <td>[[${trab.id}]]</td>
+                        <td>[[${trab.codigo}]]</td>
+                        <td>[[${trab.nombre}]]</td>
+                        <td>[[${trab.edad}]]</td>
+                        <td>[[${trab.FechaIngreso}]]</td>
+                        <td>[[${trab.correo}]]</td>
+                        <td>[[${trab.direccion}]]</td>
                         <td style="padding: 7px;">
                             <a style="margin-right: 18px; padding: 3px; text-decoration: none;"
-                                th:href="@{/duenos/editar/{id}(id=${du.id})}">
+                                th:href="@{/trabajadores/editar/{id}(id=${trab.id})}">
                                 <i class="bi bi-pencil-square" style="color: orange; font-size: 22px;"></i>
                             </a>
                             <a style="border: 2px solid; color: red; padding: 1px;"
-                                th:href="@{/duenos/eliminar/{id}(id=${du.id})}" onclick="return confirm('¿Eliminar?')">
+                                th:href="@{/trabajadores/eliminar/{id}(id=${trab.id})}" onclick="return confirm('¿Eliminar?')">
                                 <i class="bi bi-trash3-fill" style="color: red;"></i>
                             </a>
                         </td>
@@ -65,6 +69,4 @@
         </div>
     </div>
     <footer th:replace="~{fragments/layout :: footer}"></footer>
-</body>
-
 </html>

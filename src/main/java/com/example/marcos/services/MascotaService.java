@@ -35,5 +35,4 @@ public class MascotaService {
         }
         return new Mascota();
     }
-
 }

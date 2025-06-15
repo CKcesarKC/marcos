@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<head th:replace="~{fragments/layout :: head}"></head>
 <body>
-    <h1>Formulario de los Dueños</h1>
-    <a href="/duenos">Regresar</a>
-    <form style="display: flex; flex-direction: column; align-items: center; gap: 10px;" th:action="@{/duenos/procesar}" method="post" th:object="${dueno}">
-        <input type="hidden" th:field="*{id}">
-
-        <input type="text" placeholder="Nombre" th:field="*{nombre}">
-        <p th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="errors"></p> 
-
-        <input type="email" placeholder="Email" th:field="*{email}">
-        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="errors"></p> 
-
-        <input type="number" placeholder="Edad" th:field="*{edad}">
-        <p th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}" class="errors"></p> 
-
-        <label for="mascotas">Seleccione de la mascotas</label>
-        <select th:field="*{mascota}">
-        <option value="">-- Seleccione --</option>
-            <option th:each="masco : ${mascotas}" th:value="${masco.id}">
-                [[${masco.nombre}]]
-            </option>
-        </select>
-
-        <button type="submit">Procesar</button>
-    </form>
+    <header th:replace="~{fragments/layout :: header}"></header>
+    <div class="formulario-principal">
+        <div>
+            <i class="bi bi-file-earmark-plus-fill" style="font-size: 50px;"></i>
+        </div>
+        <div>
+            <h1 class="form-titulo-principal">Formulario de Registro</h1>
+            <span style="color: rgb(136, 136, 136);">
+                Rellene los campos solicitados
+            </span>
+        </div>
+    </div>
+    <div class="formulario-fondo">
+        <form class="formulario-p" th:action="@{/duenos/procesar}" method="post" th:object="${duenos}">
+            <h1>Registrar dueño</h1>
+            <a class="for-navegacion" href="/duenos">Regresar</a>
+            <input type="hidden" th:field="*{id}">
+            <div class="form-floating mb-3" style="width: 350px;">
+                <input type="text" class="form-control" placeholder="Nombre" th:field="*{nombre}">
+                <label for="floatingText">Nombre</label>
+            <p th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="errors"></p>
+            </div>
+            <div class="form-floating mb-3" style="width: 350px;">
+                <input type="email" class="form-control" placeholder="name@example.com" th:field="*{email}">
+                <label for="floatingInput">Email address</label>
+            <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="errors"></p>
+            </div>
+            <div class="form-floating mb-3" style="width: 350px;">
+                <input type="number" class="form-control" placeholder="Edad" th:field="*{edad}">
+                <label for="floatingNumber">Edad</label>
+            <p th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}" class="errors"></p>
+            </div>
+            <label for="mascotas">Seleccione una mascotas</label>
+            <select class="form-select" aria-label="Default select example" style="width: 150px;" th:field="*{mascota}">
+                <option value="" selected>SELECCIONE</option>
+                <option th:each="masco : ${mascotas}" th:value="${masco.id}">
+                    [[${masco.nombre}]]
+                </option>
+            </select>
+            <button type="submit" class="btn btn-outline-primary">Procesar</button>
+    </div>
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
 </body>
 </html>

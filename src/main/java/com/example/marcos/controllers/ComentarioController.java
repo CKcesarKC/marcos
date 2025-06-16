@@ -2,17 +2,15 @@ package com.example.marcos.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.marcos.entities.Comentario;
 import com.example.marcos.services.ComentarioService;
 
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @Controller
@@ -47,12 +45,16 @@ public class ComentarioController {
     }
 
     @PostMapping("procesar")
-    public String procesar(@Valid @ModelAttribute("comentarios") Comentario comentario, BindingResult result,
-            Model model) {
-        if (result.hasErrors()) {
-            return "pages/contactos";
-        }
-        service.insertUpdate(comentario);
+    public String procesar(@RequestParam String nombre,
+            @RequestParam String correo,
+            @RequestParam String comentario) {
+
+        Comentario nuevoComentario = new Comentario();
+        nuevoComentario.setNombre(nombre);
+        nuevoComentario.setCorreo(correo);
+        nuevoComentario.setComentario(comentario);
+
+        service.insertUpdate(nuevoComentario);
         return "redirect:/comentarios";
     }
 }

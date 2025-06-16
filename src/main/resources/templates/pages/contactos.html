@@ -11,7 +11,7 @@
                 <h2 class="fw-bold mb-4">Contáctanos para cualquier pregunta</h2>
                 <i class="fa-solid fa-envelope mb-4" style="font-size: 25px;"></i>
             </div>
-            <form th:action="@{/comentarios/procesar}" method="post" th:object="${comentarios}">
+            <form th:action="@{/comentarios/procesar}" method="post">
                 <div class="mb-3 mt-5">
                     <div class="w-75 mx-auto text-start">
                       <label class="mb-2">Nombres</label>
@@ -239,12 +239,6 @@
                     </div>
                 </div>
           </div>
-                    <a href="/mascotas">Mascotas</a>
-                    <a href="/duenos">Dueños</a>
-                    <a href="/comentarios">Comentarios</a>
-                    <a href="/productos">Productos</a>
-                    <a href="/trabajadores">Trabajadores</a>
-                    <a href="/usuarios">Usuarios</a>
     </main>
     <footer th:replace="~{fragments/layout :: footer}" ></footer>
 </body>

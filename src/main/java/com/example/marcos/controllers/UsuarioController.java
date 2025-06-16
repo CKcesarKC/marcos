@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.marcos.entities.Comentario;
 import com.example.marcos.entities.Usuario;
-import com.example.marcos.services.ComentarioService;
 import com.example.marcos.services.UsuarioService;
 
 import jakarta.validation.Valid;

@@ -16,7 +16,7 @@
     </div>
     <div class="formulario-fondo">
         <form class="formulario-p" th:action="@{/mascotas/procesar}" method="post" th:object="${mascotas}">
-            <h1>Formulario de las mascotas</h1>
+            <h1 class="text-center">Formulario de las mascotas</h1>
             <a class="for-navegacion" href="/mascotas">Regresar</a>
             <input type="hidden" th:field="*{id}">
 

@@ -3,16 +3,12 @@ package com.example.marcos.entities;
 import io.micrometer.common.lang.NonNull;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -46,15 +42,8 @@ public class Usuario {
     @Column(nullable = false, length = 9)
     private Integer telefono;
 
-    @Enumerated(EnumType.STRING)
-    @NotNull()
-    private Genero genero;
-
     @NotBlank
     @Size(min = 5, max = 50)
     @Column(nullable = false, length = 50)
     private String direccion;
-
-    @AssertTrue(message = "Debe aceptar los términos y condiciones")
-    private boolean terminos;
 }

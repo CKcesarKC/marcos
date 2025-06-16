@@ -1,36 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<head th:replace="~{fragments/layout :: head}"></head>
 <body>
-    <h1>Listado de los comentarios</h1>
-    <a href="/inicio">Regresar</a>
-    <table border="1" style="text-align: center; width: 100%;">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Correo</th>
-                <th>Comentario</th>
-                <th>
-                    <a href="comentarios/nuevo">+</a>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="comen : ${comentarios}">
-                <td>[[${comen.id}]]</td>
-                <td>[[${comen.nombre}]]</td>
-                <td>[[${comen.correo}]]</td>
-                <td>[[${comen.comentario}]]</td>
-                <td>
-                    <a th:href="@{/comentarios/eliminar/{id}(id=${comen.id})}" onclick="return confirm('¿Eliminar?')">tachito</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</body>
+    <header th:replace="~{fragments/layout :: header}"></header>
+    <div class="titulo-principal">
+        <div>
+            <i class="bi bi-check-circle" style="font-size: 55px;"></i>
+        </div>
+        <div>
+            <h1>
+                Bandeja de adopciones registradas
+            </h1>
+            <span style="color: rgb(136, 136, 136);">
+                Permite administrar, ingresar y eliminar fichas registradas
+            </span>
+        </div>
+    </div>
+    <div class="tabla-fondo">
+        <h1 class="titulo-secundario">Reseñas del público</h1>
+        <div
+            style="margin-bottom: 20px; display: flex; justify-content: space-between; padding-left: 165px; padding-right: 150px;">
+            <a class="navegacion" href="/contactos">
+                Volver
+            </a>
+            <a class="navegacion" href="comentarios/nuevo">
+                Agregar un nuevo usuario
+                <i class="bi bi-plus-circle"></i>
+            </a>
+        </div>
+        <div class="tabla-cuerpo">
+            <table class="table table-bordered" style="text-align: center; width: 80%;border: solid 2px;">
+                <thead class="table-primary">
+                    <tr>
+                        <th style="padding: 10px;">ID</th>
+                        <th>NOMBRE</th>
+                        <th>CORREO</th>
+                        <th>COMENTARIO</th>
+                        <th>
+                            <i class="bi bi-gear-fill" style="font-size: 14px;"></i>
+                            ACCIONES
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider tab">
+                    <tr th:each="comen : ${comentarios}">
+                        <td style="padding: 7px;">[[${comen.id}]]</td>
+                        <td>[[${comen.nombre}]]</td>
+                        <td>[[${comen.correo}]]</td>
+                        <td>[[${comen.comentario}]]</td>
+                        <td>
+                            <a style="margin-right: 18px; padding: 3px; text-decoration: none;"
+                                th:href="@{/comentarios/editar/{id}(id=${comen.id})}">
+                                <i class="bi bi-pencil-square" style="color: orange; font-size: 22px;"></i>
+                            </a>
+                            <a style="border: 2px solid; color: red; padding: 1px;"
+                                th:href="@{/comentarios/eliminar/{id}(id=${comen.id})}"
+                                onclick="return confirm('¿Eliminar?')">
+                                <i class="bi bi-trash3-fill" style="color: red;"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
 </html>

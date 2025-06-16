@@ -12,18 +12,18 @@
                 Bandeja de adopciones registradas
             </h1>
             <span style="color: rgb(136, 136, 136);">
-                Permite administrar, ingresar y eliminar fichas registradas
+                Permite administrar usuarios
             </span>
         </div>
     </div>
     <div class="tabla-fondo">
-        <h1 class="titulo-secundario">Listado de las Mascotas</h1>
+        <h1 class="titulo-secundario">Cuentas Registradas</h1>
         <div
             style="margin-bottom: 20px; display: flex; justify-content: space-between; padding-left: 165px; padding-right: 150px;">
-            <a class="navegacion" href="/contactos">
+            <a class="navegacion" href="/registrate">
                 Volver
             </a>
-            <a class="navegacion" href="mascotas/nuevo">
+            <a class="navegacion" href="usuarios/nuevo">
                 Agregar un nuevo usuario
                 <i class="bi bi-plus-circle"></i>
             </a>
@@ -34,9 +34,10 @@
                     <tr>
                         <th style="padding: 10px;">ID</th>
                         <th>NOMBRE</th>
-                        <th>EDAD</th>
-                        <th>FECHA DE ADOPCION</th>
-                        <th>CANTIDAD DE VACUNAS</th>
+                        <th>CORREO</th>
+                        <th>TELEFONO</th>
+                        <th>GENERO</th>
+                        <th>DIRECCIÓN</th>
                         <th>
                             <i class="bi bi-gear-fill" style="font-size: 14px;"></i>
                             ACCIONES
@@ -44,20 +45,20 @@
                     </tr>
                 </thead>
                 <tbody class="table-group-divider tab">
-                    <tr th:each="masco : ${mascotas}">
-                        <td style="padding: 7px;">[[${masco.id}]]</td>
-                        <td>[[${masco.nombre}]]</td>
-                        <td>[[${masco.edad}]]</td>
-                        <td>[[${masco.fechaAdopcion}]]</td>
-                        <td>[[${masco.vacunas}]]</td>
+                    <tr th:each="usu : ${usuarios}">
+                        <td style="padding: 7px;">[[${usu.id}]]</td>
+                        <td>[[${usu.nombre}]]</td>
+                        <td>[[${usu.correo}]]</td>
+                        <td>[[${usu.telefono}]]</td>
+                        <td>[[${usu.genero}]]</td>
+                        <td>[[${usu.direccion}]]</td>
                         <td>
-                            <a style="margin-right: 18px; padding: 3px; text-decoration: none;"
-                                th:href="@{/mascotas/editar/{id}(id=${masco.id})}">
+                            <a style="margin-right: 18px; padding: 3px; text-decoration: none;" 
+                            th:href="@{/usuarios/editar/{id}(id=${usu.id})}">
                                 <i class="bi bi-pencil-square" style="color: orange; font-size: 22px;"></i>
                             </a>
                             <a style="border: 2px solid; color: red; padding: 1px;"
-                                th:href="@{/mascotas/eliminar/{id}(id=${masco.id})}"
-                                onclick="return confirm('¿Eliminar?')">
+                                th:href="@{/usuarios/eliminar/{id}(id=${usu.id})}" onclick="return confirm('¿Eliminar?')">
                                 <i class="bi bi-trash3-fill" style="color: red;"></i>
                             </a>
                         </td>

@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<head th:replace="~{fragments/layout :: head}"></head>
 <body>
-    <h1>Formulario de las mascotas</h1>
-    <a href="/mascotas">Regresar</a>
-    <form style="display: flex; flex-direction: column; align-items: center; gap: 10px;" th:action="@{/mascotas/procesar}" method="post" th:object="${mascotas}">
-        <input type="hidden" th:field="*{id}">
+    <header th:replace="~{fragments/layout :: header}"></header>
+    <div class="formulario-principal">
+        <div>
+            <i class="bi bi-file-earmark-plus-fill" style="font-size: 50px;"></i>
+        </div>
+        <div>
+            <h1 class="form-titulo-principal">Formulario de las mascotas</h1>
+            <span style="color: rgb(136, 136, 136);">
+                Rellene los campos solicitados
+            </span>
+        </div>
+    </div>
+    <div class="formulario-fondo">
+        <form class="formulario-p" th:action="@{/mascotas/procesar}" method="post" th:object="${mascotas}">
+            <h1>Formulario de las mascotas</h1>
+            <a class="for-navegacion" href="/mascotas">Regresar</a>
+            <input type="hidden" th:field="*{id}">
 
-        <input type="text" placeholder="Nombre" th:field="*{nombre}">
-        <p th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="errors"></p> 
+            <div class="form-floating mb-3" style="width: 350px;">
+                <input type="text" class="form-control" placeholder="Nombre" th:field="*{nombre}">
+                <label for="floatingText">Nombre</label>
+            <p th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="errors"></p>
+            </div>
+            
+            <div class="form-floating mb-3" style="width: 350px;">
+                <input type="number" class="form-control" placeholder="Edad" th:field="*{edad}">
+                <label for="floatingNumber">Edad</label>
+            <p th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}" class="errors"></p>
+            </div>
+            
+            <div class="form-floating mb-3" style="width: 350px;">
+                <input type="text" class="form-control" placeholder="Vacunas" th:field="*{vacunas}">
+                <label for="floatingNumber">Vacunas</label>
+            <p th:if="${#fields.hasErrors('vacunas')}" th:errors="*{vacunas}" class="errors"></p>
+            </div>
+            
+            <div class="form-floating mb-3" style="width: 350px;">
+                <input type="date" class="form-control" placeholder="Fecha de adopción" th:field="*{fechaAdopcion}">
+                <label for="floatingNumber">Fecha de adopción</label>
+            <p th:if="${#fields.hasErrors('fechaAdopcion')}" th:errors="*{fechaAdopcion}" class="errors"></p>
+            </div>
 
-        <input type="number" placeholder="Edad" th:field="*{edad}">
-        <p th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}" class="errors"></p> 
-
-        <input type="text" placeholder="Cantidad de vacunas" th:field="*{vacunas}">
-        <p th:if="${#fields.hasErrors('vacunas')}" th:errors="*{vacunas}" class="errors"></p> 
-
-        <label for="fechaAdopcion">Fecha de Adopción</label>
-        <input type="date" placeholder="Fecha de Adopción" th:field="*{fechaAdopcion}">
-        <p th:if="${#fields.hasErrors('fechaAdopcion')}" th:errors="*{fechaAdopcion}" class="errors"></p> 
-
-        <button type="submit">Procesar</button>
-    </form>
+            <button type="submit" class="btn btn-outline-primary">Procesar</button>
+    </div>
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
 </body>
-</html>
+</html>s

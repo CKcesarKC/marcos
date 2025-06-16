@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head th:replace="~{fragments/layout :: head}"></head>
+
 <body>
     <header th:replace="~{fragments/layout :: header}"></header>
     <div class="formulario-principal">
@@ -31,12 +33,14 @@
                 <label for="floatingText">Edad</label>
                 <p th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}" class="errors"></p>
             </div>
-            
+
 
             <div class="form-floating mb-3" style="width: 350px;">
                 <input type="text" class="form-control" placeholder="Nombre" th:field="*{nombre}">
                 <label for="floatingText">Nombre</label>
-                <p th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="errors"></p>
+                <div th:if="${#fields.hasErrors('nombre')}" class="text-danger">
+                    <small th:errors="*{nombre}"></small>
+                </div>
             </div>
 
             <div class="form-floating mb-3" style="width: 350px;">
@@ -44,13 +48,13 @@
                 <label for="floatingText">Correo</label>
                 <p th:if="${#fields.hasErrors('correo')}" th:errors="*{correo}" class="errors"></p>
             </div>
-            
+
             <div class="form-floating mb-3" style="width: 350px;">
                 <input type="text" class="form-control" placeholder="Direccion" th:field="*{direccion}">
                 <label for="floatingText">Direccion</label>
                 <p th:if="${#fields.hasErrors('direccion')}" th:errors="*{direccion}" class="errors"></p>
             </div>
-            
+
             <div class="form-floating mb-3" style="width: 350px;">
                 <input type="date" class="form-control" placeholder="Fecha de Ingreso" th:field="*{FechaIngreso}">
                 <label for="floatingText">Fecha de Ingreso</label>
@@ -61,4 +65,5 @@
         </form>
     </div>
     <footer th:replace="~{fragments/layout :: footer}"></footer>
+
 </html>

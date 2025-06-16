@@ -17,43 +17,63 @@
                     <div class="col-12 col-sm-8 col-md-6 col-lg-6 bg-white text-center mb-5">
                         <h2 class="p-4">Registrarse</h2>
                         <form th:action="@{/usuarios/procesar}" method="post" th:object="${usuarios}">
+                            <input type="hidden" th:field="*{id}">
                             <div style="width: 350px; align-items: center; width: 85%; padding-left: 110px;">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" placeholder="Nombre">
+                                    <input type="text" class="form-control" placeholder="Nombre" th:field="*{nombre}">
                                     <label for="floatingText">Nombre</label>
                                 </div>
-                            </div>
-                            <div style="width: 350px; align-items: center; width: 85%; padding-left: 110px;">
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" placeholder="Correo Electronico">
-                                    <label for="floatingText">Correo Electronico</label>
+                                <div th:if="${#fields.hasErrors('nombre')}" class="text-danger">
+                                    <small th:errors="*{nombre}"></small>
                                 </div>
                             </div>
                             <div style="width: 350px; align-items: center; width: 85%; padding-left: 110px;">
                                 <div class="form-floating mb-3">
-                                    <input type="password" class="form-control" placeholder="Contraseña">
+                                    <input type="email" class="form-control" placeholder="Correo Electronico"
+                                        th:field="*{correo}">
+                                    <label for="floatingText">Correo Electronico</label>
+                                </div>
+                                <div th:if="${#fields.hasErrors('correo')}" class="text-danger">
+                                    <small th:errors="*{correo}"></small>
+                                </div>
+                            </div>
+                            <div style="width: 350px; align-items: center; width: 85%; padding-left: 110px;">
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" placeholder="Contraseña" th:field="*{contrasena}">
                                     <label for="floatingText">Contraseña</label>
+                                </div>
+                                <div th:if="${#fields.hasErrors('contrasena')}" class="text-danger">
+                                    <small th:errors="*{contrasena}"></small>
                                 </div>
                             </div>
                             <div class="input-group flex-nowrap mb-3"
                                 style="width: 350px; align-items: center; width: 85%; padding-left: 110px;">
                                 <span class="input-group-text" id="addon-wrapping">+51</span>
                                 <input type="number" class="form-control" placeholder="N° Telefónico"
-                                    aria-label="Username" aria-describedby="addon-wrapping">
-                            </div>
-                            <div style="width: 350px; align-items: center; width: 85%; padding-left: 110px;">
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" placeholder="Dirección">
-                                    <label for="floatingText">Dirección</label>
+                                    aria-label="Username" aria-describedby="addon-wrapping" th:field="*{telefono}">
+                                <div th:if="${#fields.hasErrors('telefono')}" class="text-danger">
+                                    <small th:errors="*{telefono}"></small>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-outline-success  w-50 ">Crear Cuenta</button>
+
+                            <div style="width: 350px; align-items: center; width: 85%; padding-left: 110px;">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" placeholder="Dirección"
+                                        th:field="*{direccion}">
+                                    <label for="floatingText">Dirección</label>
+                                </div>
+                                <div th:if="${#fields.hasErrors('direccion')}" class="text-danger">
+                                    <small th:errors="*{direccion}"></small>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-outline-success w-50">Procesar</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-                    <a href="/usuarios">Usuarios</a>
+        <a href="/usuarios">Usuarios</a>
     </main>
     <footer th:replace="~{fragments/layout :: footer}"></footer>
 </body>
